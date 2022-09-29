@@ -7,6 +7,8 @@
     <title> My-Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
     </style>
@@ -15,17 +17,22 @@
     <section class="hero">
         <nav>
             <img class="logo" src="images/logo.png"/>
-            <ul>
+            <ul id="nav-list">
                 <li><a href="#about-me">About me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact-me">Contact</a></li>
             </ul>
+            <button class="hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
+            </button>
         </nav>
         <div class="hero-area">
             <div class="hero-text">
                 <h1>Gina Rodolfo</h1>
                 <p>Full Stack Developer</p>
-                <div class="button">About me</div>
+                <div class="button" id="about-me">
+                    <a href="#about-me">About me</a>   
+                </div>
             </div>
             <div class="icon">
                 <a href="https://github.com/STINGRAY008" target="_blank"><i class="fa fa-github-square"></i></a>
@@ -37,8 +44,8 @@
     <!-- ----------------------------------------  About Me Section  ---------------------------------------- -->
     <section class="sub-section" id="about-me">
         <div class="information">
-            <h2>About me</h2>
-            <p>Hello. My name is Gina Rodolfo, I am currently studying Full Stack Web Development in KodeGo Bootcamp. In order to kick-start my career before I graduate, I am looking for a job of a junior web developer. I am ambitious and hard-working and believe you’ll give me a chance to prove my words.</p>
+            <h2 href="#about-me">About me</h2>
+            <p>Hello. My name is Gina Rodolfo, I am currently studying Full Stack Web Development in KodeGo Bootcamp. In order to kick-start my career before I graduate, I am looking for a job of a junior web developer. I am ambitious and hard-working. Believe you’ll give me a chance to prove my words.</p>
         </div>
         <div class="headshot-container">
             <img class="headshot" src="./images/jing.jpg"/>     
@@ -77,8 +84,10 @@
                 <h3><a class="project-link" href="https://stingray008.github.io/Dog-Photo-App/" target="_blank">View here</a></h3>
             </div>
         </div>
+        <h3 class="project-more"><a href="https://stingray008.github.io/On-Going-Project/"  target="_blank">More Projects</a></h3>
     </section>
-    <footer id="contact">
+      <!-- ----------------------------------------  Footer Section  ---------------------------------------- -->
+    <footer class="contact-me" id="contact-me">
         <h2>Contact me</h2>
         <p>jinggayrodolfo910@gmail.com</p>
         

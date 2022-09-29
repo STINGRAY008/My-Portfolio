@@ -13,7 +13,7 @@ section{
 } 
 .hero{
     background-color: #101330;
-    height: 120vh;
+    height: 100vh;
     color: #ffff;
     font-size: 40px;
 }   
@@ -49,10 +49,9 @@ p{
 }
 .hero-area{
     display: flex;
-    height: 100%;
+    height: 80%;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 200px;
 }
 .hero-text{
     margin-left: 80px;
@@ -69,9 +68,9 @@ p{
     padding-top: 5px;
     margin-top: 20px;
 }
-button:hover{
+/* button:hover{
     background-color: #ef744b;
-}
+} */
 .button:active{
     background-color: #A9A9A9;
     color: #808080;
@@ -90,6 +89,7 @@ button:hover{
 .sub-section{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 80px;
 }
 h2{
@@ -106,19 +106,42 @@ h2{
     align-items: center;
 }
 .project-card{
-    width: 250px;
-    height: 400px;
+    /* width: 250px;
+    height: 400px; */
+    width: 500px;
+    height: 480px;
     border-radius: 10px;
     box-shadow: 2px 4px 5px 0px gray;
+    overflow: hidden;
 }
+.project-card img{
+    height: 220px;
+    padding-bottom: 50px;
+}
+.project-card:hover img{
+    transform: scale(1.05);
+    transition: 1s;
+    cursor:pointer;
+  }
 .project-card p{
     text-align: left;
-    padding-bottom: 20px;
+    padding: 20px 20px 0px 20px;
+    /* padding-bottom: 20px; */
     margin: 5px 5px 5px;
 }
 .project-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 50px;
+   
+}
+@media only screen and (max-width: 1000px){
+    .project-container{
+        display: flex;
+        flex-wrap: wrap;
+    }  
 }
 .sub-section-alternative{
     display: flex;
@@ -150,10 +173,54 @@ hr{
     text-decoration: none;
     color: #ef744b;
 }
+.project-more a{
+    text-decoration: none;
+    color: #ef744b;
+   margin-top: 5%;
+    
+}
 a{
     text-decoration: none;
     color: #ffff;
 }
+.hamburger{
+    display: none;
+}
+.hamburger:focus{
+    outline: 0;
+}
+@media only screen and (max-width: 1000px){
+    .hamburger{
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: #ffff;
+        font-size: 30px;
+        margin: 20px;
+        align-self: flex-end;
+    }
+    ul{
+        display: none;
+        background-color: #424669;
+        margin: 0px;
+    }
+    li{
+        margin-left: 30px;
+    }
+    ul.show{
+        display: block;
+    }
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #424669;
+    }
+    .logo{
+        display: none;
+    }
+
+}
+
 
 
 
